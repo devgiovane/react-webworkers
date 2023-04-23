@@ -62,6 +62,12 @@ module.exports = ({ mode }) => {
                     ]
                 },
                 {
+                    test: /\.proto$/,
+                    use: {
+                        loader: "protobufjs-loader",
+                    }
+                },
+                {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
                     generator: {
